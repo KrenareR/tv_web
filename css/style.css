@@ -4576,6 +4576,13 @@ Section Title
   }
 }
 
+@media (max-width: 991.98px) {
+  .banner-section .image-box .image img .resp {
+    height: 50%;
+  }
+
+}
+
 .banner-section .image-box .image img {
   height: 100%;
 }
