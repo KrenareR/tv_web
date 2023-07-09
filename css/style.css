@@ -3588,7 +3588,7 @@ Sticky Header
   font-size: 28px;
   line-height: 20px;
   cursor: pointer;
-  color: #ffffff;
+  color: #415e73;
   display: none;
   top: 0;
   margin-left: 20px;
@@ -10798,7 +10798,7 @@ Section Title
   top: 12px;
   font-size: 28px;
   line-height: 30px;
-  color: var(--theme-color1);
+  color: #415e73;
 }
 
 .contact-info-list li .title {
