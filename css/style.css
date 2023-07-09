@@ -860,12 +860,12 @@ li {
 
 .preloader:after {
   position: absolute;
-  left: 51%;
+  /* left: 51%; */
   top: 50%;
   height: 150px;
   width: 150px;
   text-align: center;
-  margin-left: -95px;
+  /* margin-left: -95px; */
   margin-top: -70px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -886,6 +886,8 @@ li {
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   content: "Duke u ngarkuar...";
   -webkit-transition: none;
@@ -906,7 +908,7 @@ Scroll To Top style
   text-align: center;
   /* cursor: pointer; */
   /* background-color: var(--theme-color1); */
-  background-color: #6f4173;
+  background-color: #9b64a0;
   z-index: 100;
   display: none;
   border-radius: 50%;
@@ -918,7 +920,7 @@ Scroll To Top style
 }
 
 .scroll-to-top:hover {
-  background: var(--theme-color3);
+  background: #6f4173;
   color: #ffffff;
 }
 
