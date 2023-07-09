@@ -4468,7 +4468,7 @@ Section Title
 @media only screen and (max-width: 424px) {
   .banner-section .content-box .title {
     font-size: 62px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
 }
 
@@ -4571,14 +4571,15 @@ Section Title
 @media (max-width: 991.98px) {
   .banner-section .image-box {
     /* top: 250px; */
-    left: 0;
-    margin: 0 auto;
+    /* left: 0;
+    margin: 0 auto; */
+    display: none;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 375px) {
   .banner-section .image-box .image img .resp {
-    height: 50%;
+    display: none;
   }
 
 }
