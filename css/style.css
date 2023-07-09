@@ -4570,7 +4570,7 @@ Section Title
 
 @media (max-width: 991.98px) {
   .banner-section .image-box {
-    top: 250px;
+    /* top: 250px; */
     left: 0;
     margin: 0 auto;
   }
