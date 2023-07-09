@@ -1,0 +1,90 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.sec-title {
+    position: relative;
+    margin-bottom: 60px;
+    .sub-title {
+        position: relative;
+        font-size: var(--sec-title-subtitle-font-size);
+        line-height: var(--sec-title-subtitle-line-height);
+        font-weight: var(--sec-title-subtitle-font-weight);
+        font-family: var(--sec-title-subtitle-font-family);
+        display: block;
+        top: -3px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin-bottom: 15px;
+    }
+    h1{
+        position: relative;
+        font-size: var(--h1-font-size);
+        font-weight: 900;
+        line-height: 1em;
+        margin-bottom: 0;
+        @include media-breakpoint-down(xl) {
+            font-size: 84px;
+        }
+        @include media-breakpoint-down(lg){
+            font-size: 72px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 68px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 54px;
+        }
+    }
+    
+    h2 {
+        position: relative;
+        font-size: var(--sec-title-font-size);
+        color: var(--sec-title-color);
+        font-family: var(--sec-title-font-family);
+        font-weight: var(--sec-title-font-weight);
+        line-height: 1em;
+        margin-bottom: 0;
+        @include media-breakpoint-down(sm){
+            font-size: 36px;
+        }
+    }
+    .text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 50px;
+        @include for-xl{
+            br{
+                display: none;
+            }
+        }
+        @include media-breakpoint-down(xl){
+            margin-top: 30px;
+        }
+    }
+    .icon-arrow-down-2{
+        display: block;
+        margin-top: 60px;
+        @include media-breakpoint-down(xl){display: none;}
+    }
+    
+    .abs-icon{
+        @include media-breakpoint-down(sm){
+            display: none;
+        }
+    }
+    &.light{
+        h2,
+        h1{
+            color: #fff;
+        }
+    }
+}
+
+.split-line {
+    overflow: hidden;
+}

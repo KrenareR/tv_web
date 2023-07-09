@@ -1,0 +1,89 @@
+
+/*** 
+
+====================================================================
+    Fun Fact Section
+====================================================================
+
+***/
+
+.fun-fact-section{
+    position: relative;
+    padding: 140px 0 0;
+    .fact-counter{
+        position: relative;
+        margin-left: -40px;
+        margin-right: -40px;
+        padding-bottom: 70px;
+        &:before{
+            position: absolute;
+            left: -100px;
+            right: -100px;
+            bottom: 0;
+            border-bottom: 1px solid rgba(255,255,255,.10);
+            content: "";
+        }
+    }
+}
+
+//Counter BLock
+.counter-block {
+    position: relative;
+    margin-bottom: 50px;
+    &:nth-child(even){
+        .inner{background-image: none;}
+    }
+    .inner {
+        position: relative;
+        height: 350px;
+        width: 350px;
+        background-color: var(--theme-color-dark);
+        @include flex-center;
+        flex-direction: column;
+        border: 1px solid #363636;
+        border-radius: 50%;
+        text-align: center;
+        background-image: url(../images/icons/counter-bg.png);
+        @include media-breakpoint-down(xl){
+            width: auto;
+            height: auto;
+            border: 0;
+            background-image: none;
+        }
+        &:hover{
+            .count-text,
+            .count-box{
+                color: var(--theme-color1);
+            }
+        }
+    }
+    .count-box {
+        display: inline-block;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 1em;
+        @include text-outline(var(--theme-color1));
+        transition: all 300ms ease;
+        margin-top: -25px;
+        margin-bottom: 5px;
+        @include media-breakpoint-down(xl) {
+            margin-top: 0;
+        }
+        .count-text {
+            font-size:100px;
+            font-weight: 700;
+            line-height: 1em;
+        }
+    }
+    .counter-title {
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        font-weight: 400;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        
+    }
+}

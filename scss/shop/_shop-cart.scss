@@ -1,0 +1,92 @@
+/*
+ * shop-catalog-layouts.scss
+ * -----------------------------------------------
+*/
+
+table.tbl-shopping-cart,
+table.cart-total {
+	.product-thumbnail {
+		min-width: 64px;
+	}
+
+	img {
+		width: 64px;
+		box-shadow: none;
+	}
+
+	th,
+	td {
+		vertical-align: middle;
+		border-left: 1px solid var(--theme-color-dark);
+		padding: 20px 30px;
+	}
+	.product-name {
+		a {
+			color: var(--theme-color-light);
+		}
+		.variation {
+			font-size: 0.9rem;
+			list-style: none;
+			color: var(--theme-color-dark);
+		}
+	}
+	.product-price,
+	.product-subtotal {
+		.amount {
+			color: var(--theme-color-light);
+		}
+	}
+
+	.product-remove a {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		border-radius: 24px;
+		@include transition(all 300ms ease-out);
+		background-color: #757575;
+		color: #ffffff;
+		text-align: center;
+	}
+	.coupon-form {
+		.apply-button {
+			position: relative;
+			display: inline-block;
+			color: #1e2434;
+			background: #f4f5f4;
+			padding: 15px 29px;
+			cursor: pointer;
+			text-transform: uppercase;
+			@include transition(all 500ms ease);
+			&:hover {
+				color: var(--text-color-bg-theme-color2);
+				background-color: var(--theme-color2);
+			}
+		}
+	}
+}
+table.tbl-shopping-cart > thead > tr > th,
+table.tbl-shopping-cart > tbody > tr > th,
+table.tbl-shopping-cart > tfoot > tr > th	{
+	color: var(--theme-color-light);
+}
+
+table.tbl-shopping-cart,
+table.cart-total {
+	thead,
+	tbody,
+	th,
+	td {
+		border-color: var(--theme-color-dark);
+	}
+}
+.tbl-shopping-cart,
+.table.cart-total {
+	tbody {
+		tr {
+			td {
+				color: var(--theme-color-light);
+			}
+		}
+	}
+}

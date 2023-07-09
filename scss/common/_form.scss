@@ -1,0 +1,42 @@
+
+/*=== Default Form ===*/
+
+@function form-control-height() {
+  @return calc(2.25rem + 27px);
+}
+.form-control, .input-text {
+    height: form-control-height();
+    padding: 14px 30px;
+    outline: 0;
+    background-color: var(--theme-light-background);
+    border: 1px solid var(--theme-color-dark);
+    color: var(--theme-color-light);
+    font-size: 0.9rem;
+    width: 100%;
+    &::placeholder {
+        color: var(--theme-color-light);
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: var(--theme-color-light);
+    }
+    &::-ms-input-placeholder {
+        color: var(--theme-color-light);
+    }
+}
+textarea {
+    &.form-control {
+        background-color: var(--theme-light-background);
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+.form-control {
+    &:active,&:focus {
+        background-color: var(--theme-color-dark);
+        color: var(--theme-color-light);
+        border-color: var(--theme-color-light);
+        box-shadow: none;
+    }
+}

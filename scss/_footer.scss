@@ -1,0 +1,360 @@
+
+/***
+
+==================================================================
+	Main Footer
+==================================================================
+
+***/
+
+.main-footer{
+	position: relative;
+	background-color: #101010;
+	.footer-upper{
+		position: relative;
+		padding: 120px 0 0;
+		padding-right: 150px;
+		@include media-breakpoint-down(lg) {
+			padding-right: 0;
+		}
+		.logo{
+			position: absolute;
+			right: 0;
+			top: 125px;
+			@include media-breakpoint-down(lg) {
+				position: relative;
+				top: 0;
+				margin-bottom: 40px;;
+			}
+		}
+		.text{
+			font-size: 16px;
+			font-weight: 700;
+			color: #ffffff;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			display: block;
+			margin-bottom: 12px;
+		}
+		.title{
+			font-size: 60px;
+			line-height: 1em;
+			font-weight: 700;
+			margin-bottom: 50px;
+			@include media-breakpoint-down(lg){
+				font-size: 42px;
+			}
+			@include media-breakpoint-down(md){
+				font-size: 34px;
+			}
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+			}
+		}
+	}
+	.widgets-section{
+		position: relative;
+		padding:100px 0 55px;
+	}
+	.footer-column {
+		position: relative;
+		margin-bottom: 40px;
+	}
+	.footer-widget {
+		position: relative;
+	}
+	.widget-title {
+		position: relative;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 700;
+		color: var(--theme-color-light);
+		line-height: 1.2em;
+		letter-spacing: .1em;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+
+	//Footst Style Two
+	&.style-two {
+		.footer-upper {
+			padding-bottom: 30px;
+			.title {
+				color: #ffffff;
+			}
+			.logo{
+				top: 160px;
+				@include media-breakpoint-down(lg){
+					top: 0;
+				}
+			}
+		}
+		.widgets-section{
+			padding-top: 90px;
+			&:before{
+				@include absolute;
+				width: 100%;
+				border-top: 1px solid rgba(255,255,255,.1);
+				content: "";
+			}
+			.upper-box{
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				padding-bottom: 70px;
+				@include media-breakpoint-down(lg){
+					flex-direction: column;
+				}
+				.title{
+					font-size: 40px;
+					color: #ffffff;
+					letter-spacing: .01em;
+					font-weight: 400;
+					@include media-breakpoint-down(lg){
+						font-size: 28px;
+						margin-bottom: 30px;
+						br{display: none;}
+					}
+				}
+			}
+			.subscribe-form{
+				margin-top: -40px;
+				@include media-breakpoint-down(lg){
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	//Footst Style Three
+	&.style-three{
+		.widgets-section{
+			padding-bottom: 80px;
+		}
+		.about-widget{
+			.logo{
+				margin-bottom: 5px;
+			}
+			.title{
+				display: inline-block;
+				font-size: 60px;
+				line-height: 1.2em;
+				margin-bottom: 60px;
+				@include media-breakpoint-down(sm){
+					font-size: 42px;
+					margin: 20px 0 80px;
+				}
+			}
+			.arrow-icon{
+				position: absolute;
+				right: 70px;
+				bottom: -40px;
+				@include media-breakpoint-down(sm){
+					right: 20px;
+				}
+			}
+		}
+
+		.user-links{
+			margin-bottom: 50px;
+		}
+	}
+
+	//Footst Style Four
+	&.style-four{
+		.footer-upper {
+			padding-right: 0;
+			padding-bottom: 30px;
+			.inner{
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				@include media-breakpoint-down(lg){
+					flex-direction: column;
+				}
+			}
+			.logo{
+				position: relative;
+				top: 0;
+				margin-bottom: 28px;
+			}
+			.title {
+				position: relative;
+				display: inline-block;
+				color: #ffffff;
+				font-size: 40px;
+				line-height: 1.2em;
+				font-weight: 400;
+				.arrow-icon{
+					position: absolute;
+					right: -100px;
+					top: 90px;
+					transform: rotate(-25deg);
+				}
+			}
+			.social-icon-two{
+				margin-top: 10px;
+			}
+
+		}
+		.widgets-section{
+			padding-top: 50px;
+			&:before{
+				display: none;
+			}
+
+			.text-box{
+				display: inline-block;
+				text-align: left;
+				.text{
+					font-size: 16px;
+					text-transform: uppercase;
+					display: block;
+					color: #ffffff;
+					font-weight: 700;
+					letter-spacing: .1em;
+					margin-bottom: 5px;
+				}
+				.title{
+					font-size: 40px;
+					color: #ffffff;
+					letter-spacing: .01em;
+					font-weight: 400;
+					@include media-breakpoint-down(sm){
+						font-size: 28px;
+					}
+				}
+			}
+			.about-widget{
+				text-align: right;
+				@include media-breakpoint-down(lg){
+					text-align: left;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+
+
+/*=== User LInks ===*/
+.user-links {
+	position: relative;
+	li {
+		position: relative;
+		font-size: 16px;
+		line-height: 24px;
+		color: #606060;
+		font-weight: 400;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			color: inherit;
+			transition: all 300ms ease;
+			&:hover {
+				color: var(--theme-color-light);
+			}
+			&:before {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 1px;
+				background-color: var(--theme-color-light);
+				content: "";
+				transition: all 300ms ease;
+			}
+			&:hover:before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+/* Subscribe Form */
+.subscribe-form {
+	position: relative;
+	padding: 40px 60px;
+	background-color: #0c0c0c;
+	@include media-breakpoint-down(lg){
+		padding: 40px 40px;
+	}
+	@include media-breakpoint-down(sm){
+		padding: 30px 30px;
+	}
+	.text{
+		margin-bottom: 10px;
+	}
+	.form-group {
+		position: relative;
+		margin-bottom: 0;
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 50px;
+			width: 100%;
+			font-size: 14px;
+			line-height: 20px;
+			color: #ffffff;
+			padding: 15px 0;
+			padding-right: 60px;
+			background-color: transparent;
+			border-bottom: 1px solid rgba(255,255,255,.1);
+			transition: all 300ms ease;
+			&::placeholder {
+				color: #ffffff;
+			}
+		}
+		.theme-btn {
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			margin-top: -25px;
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			border-radius: 50%;
+			color: var(--theme-color1);
+			display: block;
+			background: transparent;
+			&:hover{
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+
+/*=== Footer Bottom ===*/
+.footer-bottom {
+	position: relative;
+	width: 100%;
+	.inner-container {
+		position: relative;
+		text-align: center;
+		border-top: 1px solid rgba(255,255,255,.1);
+		padding: 30px 0;
+	}
+	.copyright-text {
+		position: relative;
+		font-size: 16px;
+		line-height: 30px;
+		color: #606060;
+		font-weight: 400;
+		margin-bottom: 0px;
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--theme-color-light);
+			}
+		}
+	}
+}

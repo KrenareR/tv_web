@@ -1,0 +1,597 @@
+/***
+
+====================================================================
+    Project Section
+====================================================================
+
+***/
+
+.project-section {
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        .icon-arrow-down-2{
+            position: relative;
+            display: inline-block;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            @include media-breakpoint-down(md){
+                display: none;
+            }
+        }
+    }
+    
+    .outer-box{
+        margin: 0 -10px;
+        .row{
+            margin: 0 -30px;
+            >div{
+                padding: 0 30px;
+            }
+        }
+        @include media-breakpoint-down(xxl){
+            margin: 0;
+            padding: 0 20px;
+            .row{
+                margin: 0 -10px;
+                >div {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.project-block {
+    position: relative;
+    margin-bottom: 60px;
+    @include media-breakpoint-down(xxl){
+        margin-bottom: 20px;
+    }
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image-box{
+                .overlay-content{
+                    @include fade-in;
+                    transform: scale(1);
+                    transition-delay: 0ms;
+                    .title{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 0;
+                        transition-delay: 300ms;
+                    }
+                    .cat{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 0;
+                        transition-delay: 600ms;
+                    }
+                }
+                .image{
+                    a img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        transition: all 300ms ease;
+        .image {
+            position: relative;
+            margin-bottom: 0px;
+            a {
+                display: block;
+                width: 100%;
+            }
+            img{
+                transition: all 300ms ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .overlay-content{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            padding: 30px 30px;
+            @include vertical-center;
+            align-items: center;
+            justify-content: center;
+            transform: scaleX(.8);
+            text-align: center;
+            transition-delay: 150ms;
+            @include fade-out;
+            transition: all 300ms linear;
+            &:before{
+                @include overlay;
+                background: var(--gradient-1);
+                opacity: .8;
+                content: "";
+            }
+            .cat{
+                position: relative;
+                display: inline-block;
+                top: 20px;
+                color: var(--theme-color-light);
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 300ms ease;
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -1px;
+                    border-top: 1px solid var(--theme-color1);
+                    content: "";
+                }
+            }
+            .title{
+                position: relative;
+                top: 20px;
+                font-size: 30px;
+                color: var(--theme-color-light);
+                font-weight: 600;
+                text-transform: uppercase;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Project Section Two
+====================================================================
+
+***/
+
+.project-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        margin-bottom: 15px;
+        .text{
+            margin-top: 0;
+            margin-left: 70px;
+            @include media-breakpoint-down(xxl){
+                margin-left: 0;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    
+    .mixitup-gallery{
+        margin: 0 -200px;
+        @include for-xxl{
+            margin: 0 -100px;
+        }
+        @include media-breakpoint-down(xxl){
+            margin: 0;
+        }
+        .row{
+            margin: 0 -30px;
+            >div{
+                padding: 0 30px;
+            }
+            @include media-breakpoint-down(xxl){
+                margin: 0 -15px;
+                >div{padding: 0 15px;}
+            }
+        }
+        .filter-btns{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+            @include media-breakpoint-down(sm){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .filter{
+                position: relative;
+                font-size: 16px;
+                line-height: 30px;
+                color: #606060;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: .07em;
+                margin-right: 40px;
+                cursor: pointer;
+                transition: all 300ms ease;
+                @include media-breakpoint-down(sm){
+                    margin-right: 0;
+                }
+                &:before{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--theme-color1);
+                    content: "";
+                }
+                &:hover,
+                &.active{
+                    color: #181818;
+                    &:before{
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project-block-two{
+    &.mix{display: none;}
+    position: relative;
+    margin-bottom: 60px;
+    @include media-breakpoint-down(xxl){margin-bottom: 30px;}
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image-box{
+                .image{
+                    a img{
+                        transform: scale(1.1);
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+    }
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        transition: all 300ms ease;
+        .image {
+            position: relative;
+            background: var(--theme-color-dark);
+            margin-bottom: 0px;
+            a {
+                display: block;
+                width: 100%;
+            }
+            img{
+                transition: all 300ms ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &.read-more{
+        .inner-box{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .play-btn{
+                .icon{
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                &:hover{
+                    .icon{
+                        background-color: var(--theme-color-dark);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Project Section Three
+====================================================================
+
+***/
+
+.project-section-three{
+    position: relative;
+    padding: 120px 0 0;
+    .sec-title{
+        .icon-arrow-down-2{
+            position: relative;
+            display: inline-block;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+        }
+    }
+}
+
+.project-block-three{
+    position: relative;
+    margin-bottom: 0px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image-box{
+                &:before{
+                    opacity: .6;
+                }
+                .overlay-content{
+                    @include fade-in;
+                    transform: scale(1);
+                    transition-delay: 0ms;
+                    .title{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 0;
+                        transition-delay: 300ms;
+                    }
+                    .cat{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 0;
+                        transition-delay: 600ms;
+                    }
+                }
+                .image{
+                    a img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        transition: all 300ms ease;
+        &:before {
+            @include overlay;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: all 300ms ease;
+            z-index: 1;
+            content: "";
+        }
+        .image {
+            position: relative;
+            margin-bottom: 0px;
+            a {
+                display: block;
+                width: 100%;
+            }
+            img{
+                transition: all 300ms ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .overlay-content{
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            padding: 40px 50px;
+            max-width: 360px;
+            width: 100%;
+            @include vertical-center;
+            justify-content: center;
+            transform: scaleX(.8);
+            transform-origin: left;
+            transition-delay: 150ms;
+            align-items: flex-start;
+            @include fade-out;
+            background-color: rgba(24,24,24,.90);
+            transition: all 300ms linear;
+            z-index: 3;
+            @include media-breakpoint-down(sm){
+                padding: 30px 30px;
+                max-width: 300px;
+            }
+            .cat{
+                position: relative;
+                display: inline-block;
+                top: 20px;
+                color: var(--theme-color-light);
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 300ms ease;
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -1px;
+                    border-top: 1px solid var(--theme-color1);
+                    content: "";
+                }
+            }
+            .title{
+                position: relative;
+                top: 20px;
+                font-size: 30px;
+                color: var(--theme-color-light);
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Project Section Four 
+====================================================================
+
+***/
+
+.project-section-four{
+    position: relative;
+    padding: 140px 0 110px;
+    .bg{
+        background-size: auto;
+        background-position: left top;
+        left: -280px;
+        top: -370px;
+    }
+
+    .sec-title{
+        margin-bottom: 70px;
+    }
+    
+    .text-column{
+        position: relative;
+        .circles{
+            position: absolute;
+            left: 0px;
+            bottom: 200px;
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            background-color: #141313;
+            opacity: .05;
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+            &:before{
+                position: absolute;
+                height: 170px;
+                width: 170px;
+                border-radius: 50%;
+                left: 100px;
+                bottom: 0;
+                border: 1px solid var(--theme-color-dark);
+                content: "";
+            }
+        }
+    }
+
+    .content-column{
+        .inner-column{
+            margin-top: 300px;
+            margin-left: -30px;
+            @include media-breakpoint-down(xl){
+                margin-left: 0;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+
+.projects-list{
+    position: relative;
+}
+.project-block-four{
+    position: relative;
+    @include flex-center;
+    justify-content: space-between;
+    padding: 35px 30px;
+    padding-left: 130px;
+    padding-right: 150px;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    min-height: 140px;
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    &:hover{
+        .count{
+            color: var(--theme-color1);
+        }
+        .icon-box{
+            .icon-arrow{
+                background-image: url(../images/icons/icon-arrow-down-right-5.png);
+            }
+        }
+        .image{
+            opacity: 1;
+            visibility: visible;
+            top: -150px;
+            transform: rotate(22deg);
+            transform-origin: right bottom;
+            @include media-breakpoint-down(sm){
+                top: 0;
+            }
+        }
+    }
+    .count{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1em;
+        transition: all 300ms ease;
+        @include text-outline(var(--theme-color1));
+        @include media-breakpoint-down(sm){
+            position: relative;
+            top: 0;
+            transform: none;
+            display: inline-flex;
+        }
+    }
+    .title{
+        margin-bottom: 0;
+        text-transform: uppercase;
+        min-width: 280px;
+    }
+    .image{
+        position: absolute;
+        right: 120px;
+        top: -120px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 300ms ease;
+    }
+    .icon-box{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -19px;
+        .icon-arrow{
+            display: block;
+            width: 38px;
+            height: 38px;
+            background-image: url(../images/icons/icon-arrow-down-right-4.png);
+        }
+        @include media-breakpoint-down(sm){
+            position: relative;
+            top: 0;
+            margin: 20px 0 0;
+        }
+    }
+}

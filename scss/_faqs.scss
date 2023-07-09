@@ -1,0 +1,119 @@
+/*** 
+
+====================================================================
+		FAQ's Sectiom
+====================================================================
+
+***/
+
+.faqs-section {
+    position: relative;
+    padding: 160px 0 100px;
+    .faq-column{
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-top: 70px;
+            padding-left: 90px;
+            margin-right: -130px;
+            @include for-lg{
+                padding-left: 0;
+                padding-top: 0;
+                margin-right: 0;
+            }
+        }
+        .sec-title-three{
+            margin-bottom: 40px;
+        }
+    }
+    .image-column{
+        @include for-md{
+            order: 2;
+        }
+        .inner-column{
+            margin-left: -376px;
+            margin-right: -90px;
+            display: flex;
+            .image{
+                margin-right: 60px;
+            }
+            @include for-lg{
+                margin-left: 0;
+                margin-right: 0;
+                flex-direction: column;
+                align-items: center;
+                .image{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.accordion-box {
+    position: relative;
+    .block {
+        position: relative;
+        border-bottom: 1px solid rgba(255,255,255,.10);
+        &:last-child{
+            border-bottom: 0;
+        }
+        .acc-btn {
+            position: relative;
+            font-size: 22px;
+            line-height: 30px;
+            color: var(--theme-color-light);
+            font-weight: 700;
+            cursor: pointer;
+            padding: 27px 0px;
+            padding-right: 70px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            transition: all 500ms ease;
+            .icon {
+                position: absolute;
+                right: 0px;
+                top: 27px;
+                height: 30px;
+                font-size: 18px;
+                line-height: 30px;
+                color: var(--theme-color-light);
+                transition: all 500ms ease;
+            }
+            &.active {
+                color: var(--theme-color-light);
+                .icon {
+                    color: var(--theme-color-light);
+            
+                    &:before {
+                        content: "\f068";
+                    }
+                }
+            }
+        }
+        .acc-content {
+            position: relative;
+            display: none;
+            .content {
+                position: relative;
+                .text {
+                    display: block;
+                    font-size: 20px;
+                    line-height: 32px;
+                    color: var(--theme-color1);
+                    font-weight: 400;
+                    letter-spacing: .05em;
+                    margin-bottom: 25px;
+                }
+            }
+
+            &.current {
+                display: block;
+            }
+        }
+    }
+}

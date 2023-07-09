@@ -1,0 +1,315 @@
+/*** 
+
+====================================================================
+		About Section
+====================================================================
+
+***/
+
+.about-section {
+    position: relative;
+    padding: 120px 0 70px;
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 1;
+        @include media-breakpoint-down(lg){
+            order: 0 !important;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .inner-column {
+            position: relative;
+            padding-top: 100px;
+            margin-right: -50px;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+                padding-top: 0;
+            }
+        }
+        .sec-title{
+            .text{
+                max-width: 450px;
+                @include media-breakpoint-down(lg){
+                    margin: 30px auto 0;
+                }
+            }
+            .icon{
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+        }
+        .icon-star2{
+            position: absolute;
+            right: 60px;
+            bottom: -70px;
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-right: 60px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+        .image{
+            position: relative;
+            display: inline-block;
+            background-color: var(--theme-color-dark);
+            border-radius: 500px 500px 0 0;
+            overflow: hidden;
+            margin-bottom: 0;
+            img {
+                width: 100%;
+                border-radius: 500px 500px 0 0;
+            }
+        }
+        .image-2{
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 0;
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+
+    }
+}
+
+/*** 
+
+====================================================================
+		About Section Two
+====================================================================
+
+***/
+
+.about-section-two{
+    position: relative;
+    padding: 140px 0 60px;
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 1;
+        .inner-column {
+            position: relative;
+            @include media-breakpoint-down(xl){
+                padding-right: 30px;
+            }
+            @include media-breakpoint-down(sm){
+                padding-right: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 40px;
+            .other-title{
+                margin-top: 40px;
+                color: var(--theme-color1);
+                font-weight: 300;
+                margin-bottom: 0;
+                @include media-breakpoint-down(md){
+                    font-size: 18px;
+                }
+            }
+            .text{
+                margin-top: 35px;
+            }
+        }
+    }
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-left: 40px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+                padding-top: 50px;
+            }
+        }
+        .image-3,
+        .image-2,
+        .image{
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin-right: 10px;
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                border-radius: 500px 500px;
+
+            }
+        }
+        .image-2{
+            img{
+                border-radius: 0;
+            }
+        }
+        .image-3{
+            margin-right: 0;
+        }
+         .rounded-text{
+            position: absolute;
+            right: -70px;
+            top: -30px;
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+            .letter{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                line-height: 1em;
+                font-size: 110px;
+                color: var(--theme-color-dark);
+                font-weight: 700;
+            }
+            img{
+                animation: fa-spin 30s infinite linear;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    About Section Three
+====================================================================
+
+***/
+
+.about-section-three{
+    position: relative;
+    padding: 140px 0 130px;
+    .bg{
+        top: auto;
+        left: -310px;
+        bottom: -380px;
+        background-size: auto;
+        background-position: left bottom;
+    }
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 1;
+        @include media-breakpoint-down(lg){
+            order: 0 !important;
+        }
+        .inner-column {
+            position: relative;
+            padding-top: 80px;
+            padding-right: 30px;
+            @include media-breakpoint-down(xxl){
+                padding-right: 0;
+            }
+            @include media-breakpoint-down(lg){
+                padding-top: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 70px;
+            h1{
+                margin-right: -100px;
+                @include media-breakpoint-down(xxl){
+                    margin-right: 0;
+                    line-height: .9em;
+                }
+            }
+            .other-title{
+                margin-top: 40px;
+                color: var(--theme-color1);
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+            .text{
+                margin-top: 10px;
+            }
+        }
+    }
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-right: 110px;
+            @include media-breakpoint-down(xxl){
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+        .image{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;
+            &:before{
+                @include overlay;
+                margin-left: 65px;
+                border: 1px solid #000;
+                border-radius: 300px 300px 0 0;
+                opacity: .2;
+                content: "";
+                @include media-breakpoint-down(xxl){
+                    display: none;
+                }
+            }
+            img {
+                width: 100%;
+                border-radius: 500px 500px 0 0;
+
+            }
+        }
+         .exp-box{
+            position: absolute;
+            left: 0;
+            top: 190px;
+            height: 380px;
+            width: 248px;
+            background-color: var(--theme-color-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 200px;
+            padding: 30px 30px;
+            text-align: center;
+            transform: translateX(-50%);
+            @include media-breakpoint-down(xxl){
+                display: none;
+            }
+            &::before{
+                @include overlay;
+                background: linear-gradient(45deg, var(--theme-color1), transparent, transparent, transparent);
+                border-radius: 200px;
+                opacity: .25;
+                content: "";
+            }
+            .count{
+                font-size: 120px;
+                color: var(--theme-color1);
+                line-height: 1em;
+                margin-bottom: 20px;
+            }
+            .text{
+                font-size: 24px;
+                color: var(--theme-color-light);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
