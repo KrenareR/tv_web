@@ -4405,11 +4405,11 @@ Section Title
 
 .banner-section .content-box .sub-title {
   position: relative;
-  margin-left: 290px;
+  margin-left: 170px;
   display: inline-block;
   font-size: 16px;
   line-height: 24px;
-  padding-right: 30px;
+  padding-left: 30px;
   color: #606060;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -4436,7 +4436,7 @@ Section Title
 .banner-section .content-box .title {
   position: relative;
   color: var(--theme-color-light);
-  font-size: 180px;
+  font-size: 95px;
   line-height: 1em;
   text-transform: uppercase;
   font-weight: 500;
@@ -4502,7 +4502,7 @@ Section Title
 
 @media only screen and (max-width: 1699px) {
   .banner-section .content-box .title .line-2 {
-    left: 25%;
+    /* left: 25%; */
   }
 }
 
@@ -4531,7 +4531,7 @@ Section Title
   position: absolute;
   display: inline-block;
   left: 50px;
-  bottom: -30px;
+  bottom: -70px;
 }
 
 @media (max-width: 1399.98px) {
